@@ -1,11 +1,16 @@
 import React from 'react'
 import NavBar from './components/NavBar'
+import Hero from './components/Hero'
 
 const App = () => {
   return (
-   <main>
+    <>
     <NavBar/>
+   <main className="transform transition-transform duration-500"> 
+    
+    <Hero/>
    </main>
+   </>
   )
 }
 

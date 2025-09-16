@@ -86,7 +86,7 @@ body {
 
     /* Navbar Styles */
     .navbar {
-        @apply w-full bg-[#18181b] shadow-md sticky top-0 z-100;
+        @apply w-full bg-[#18181b] shadow-md fixed top-0 z-100;
     }
 
     .navbar__container {

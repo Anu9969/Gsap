@@ -7,52 +7,54 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const NavBar = () => {
-  const navRef = useRef(null);
+    const navRef = useRef(null);
 
-  useGSAP(() => {
-    // Create a timeline and attach the ScrollTrigger to it
-    const navTween = gsap.timeline({
-      scrollTrigger: {
-        trigger: navRef.current, // Use the ref for the trigger
-        start: 'bottom top',
-        end: '+=500',
-        scrub: true,
-      },
-    });
+    useGSAP(() => {
+        // Use a .fromTo() tween for more control over the start/end states
+        gsap.fromTo(navRef.current, 
+            {
+                // Starting state: completely transparent
+                backgroundColor: 'transparent',
+            },
+            {
+                // Ending state
+                // 1. Animate to a SEMI-TRANSPARENT background color
+                backgroundColor: 'rgba(0, 0, 0, 0.25)', 
+                
+                // 2. Apply the backdrop-filter to blur content behind the navbar
+                backdropFilter: 'blur(10px)',
+                
+                ease: 'power1.out',
+                scrollTrigger: {
+                    trigger: navRef.current,
+                    start: 'top top',
+                    end: '+=200',
+                    scrub: true,
+                    // 3. REMOVE pin: true, as CSS will handle positioning
+                },
+            }
+        );
+    }, []);
 
-    // Add a .fromTo() animation TO the timeline
-    navTween.fromTo(
-      navRef.current, // Target the element using the ref
-      { backgroundColor: 'transparent' },
-      {
-        backgroundColor: '#000',
-        filter: 'blur(10px)', // Use the correct CSS property
-        duration: 1,
-        ease: 'power1.out',
-      }
+    return (
+        <nav className="navbar" ref={navRef}>
+            <div className="navbar__container">
+                <a href="#home" className="navbar__logo">
+                    <img src="/images/logo.png" alt="Logo" className="navbar__logo-img" />
+                    <h2 className="">Logo</h2>
+                </a>
+                <ul className="navbar__links">
+                    {navLinks.map((link) => (
+                        <li key={link.id} className="navbar__item">
+                            <a href={`#${link.id}`} className="navbar__link">
+                                {link.title}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </nav>
     );
-  }, []);
-
-  return (
-    <nav className="navbar" ref={navRef}>
-      
-      <div className="navbar__container">
-        <a href="#home" className="navbar__logo">
-          <img src="/images/logo.png" alt="Logo" className="navbar__logo-img" />
-          <span className="navbar__logo-text">Logo</span>
-        </a>
-        <ul className="navbar__links">
-          {navLinks.map((link) => (
-            <li key={link.id} className="navbar__item">
-              <a href={`#${link.id}`} className="navbar__link">
-                {link.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
-  );
 };
 
 export default NavBar;
