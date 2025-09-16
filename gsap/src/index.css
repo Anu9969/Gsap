@@ -84,6 +84,57 @@ body {
         }
     }
 
+    /* Navbar Styles */
+    .navbar {
+        @apply w-full bg-[#18181b] shadow-md sticky top-0 z-100;
+    }
+
+    .navbar__container {
+        @apply max-w-[1200px] mx-auto py-3 px-8 flex items-center justify-between;
+    }
+
+    .navbar__logo {
+        @apply flex items-center gap-3 no-underline;
+    }
+
+    .navbar__logo-img {
+        @apply h-12 w-12 object-contain;
+    }
+
+    .navbar__logo-text {
+        @apply text-white text-4xl font-bold tracking-wide;
+    }
+
+    .navbar__links {
+        @apply flex gap-8 list-none m-0 p-0;
+    }
+
+    .navbar__item {}
+
+    .navbar__link {
+        @apply text-white no-underline text-lg font-medium py-2 px-3 rounded transition-all duration-200;
+    }
+
+    .navbar__link:hover,
+    .navbar__link:focus {
+        @apply bg-[#27272a] text-[#38bdf8];
+    }
+
+    @media (max-width: 768px) {
+        .navbar__container {
+            @apply flex-col items-start py-4 px-4;
+        }
+        .navbar__links {
+            @apply gap-4 mt-2;
+        }
+        .navbar__logo-img {
+            @apply h-10 w-10;
+        }
+        .navbar__logo-text {
+            @apply text-3xl;
+        }
+    }
+
     .noisy {
         @apply absolute inset-0 size-full bg-[url("/images/noise.png")];
     }
