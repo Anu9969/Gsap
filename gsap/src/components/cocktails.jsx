@@ -2,6 +2,8 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
 import { cocktailLists, mockTailLists } from '../../constants/index.js'
 
+
+
 const Cocktails = () => {
  useGSAP(() => {
 	const parallaxTimeline = gsap.timeline({
