@@ -9,6 +9,7 @@ const App = () => {
    <main className="transform transition-transform duration-500"> 
     
     <Hero/>
+    <cocktails/>
    </main>
    </>
   )
