@@ -47,20 +47,23 @@ const Hero = () => {
 		const endValue = isMobile ? '120% top' : 'bottom top';
 
 		// Video animation timeline
-		// Create the timeline with a default duration
+		if (videoRef.current) {
+			videoRef.current.pause();
+		}
+
 		const tl = gsap.timeline({
 			scrollTrigger: {
-				trigger: 'video',
+				trigger: videoRef.current,
 				start: startValue,
 				end: endValue,
 				scrub: true,
-			 	pin: true,
 			}
 		})
 
 		videoRef.current.onloadedmetadata = () => {
 		 tl.to(videoRef.current, {
-			currentTime: videoRef.current.duration
+			currentTime: videoRef.current.duration,
+			ease: "none"
 		 })
 		}
 	}, []);

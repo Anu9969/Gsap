@@ -1,17 +1,18 @@
 import React from 'react'
 import NavBar from './components/NavBar'
 import Hero from './components/Hero'
+import Cocktails from './components/Cocktails'
 
 const App = () => {
   return (
-    <>
-    <NavBar/>
-   <main className="transform transition-transform duration-500"> 
     
+   
+   <main> 
+     <NavBar/>
     <Hero/>
-    <cocktails/>
+    <Cocktails/>
    </main>
-   </>
+   
   )
 }
 
