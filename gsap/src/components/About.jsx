@@ -2,7 +2,15 @@ import gsap from 'gsap';
 import { SplitText} from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 
+
+
+
+
 const About = () => {
+
+
+
+
  useGSAP(() => {
 	const titleSplit = SplitText.create('#about h2', {
 	 type: 'words'
