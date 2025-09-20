@@ -86,14 +86,14 @@ const profileLists = [
  },
 ];
 
-const featureList = [
+const featureLists = [
  "Perfectly balanced blends",
  "Garnished to perfection",
  "Ice-cold every time",
  "Expertly shaken & stirred",
 ];
 
-const goodList = [
+const goodLists = [
  "Handpicked ingredients",
  "Signature techniques",
  "Bartending artistry in action",
@@ -134,7 +134,7 @@ const socials = [
  },
 ];
 
-const sliderLists = [
+const allCocktails = [
  {
 	id: 1,
 	name: "Classic Mojito",
@@ -174,10 +174,10 @@ export {
  cocktailLists,
  mockTailLists,
  profileLists,
- featureList,
- goodList,
+ featureLists,
+ goodLists,
  openingHours,
  storeInfo,
  socials,
- sliderLists,
+ allCocktails,
 };
