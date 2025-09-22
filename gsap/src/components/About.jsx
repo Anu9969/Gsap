@@ -29,16 +29,15 @@ const About = () => {
 	 <div className="mb-16 md:px-0 px-5">
 		<div className="content">
 		 <div className="md:col-span-8">
-			<p className="badge">Best Cocktails</p>
+			<p className="badge">The Vedu Mojito</p>
 			<h2>
-			 Where every detail matters <span className="text-white">-</span>
-				from muddle to garnish
+			 Where every detail matters <span className="text-white">-</span> a Vedu obsession from muddle to garnish.
 			</h2>
 		 </div>
 		 
 		 <div className="sub-content">
 			<p>
-			 Every cocktail we serve is a reflection of our obsession with detail — from the first muddle to the final garnish. That care is what turns a simple drink into something truly memorable.
+			 Every mojito we serve is a reflection of our <b>Vedu obsession</b>. It's in the careful selection of ingredients, the precise muddle, and the final garnish. That care is what turns a simple drink into a truly memorable Vedu moment.
 			</p>
 			
 			<div>
@@ -46,7 +45,7 @@ const About = () => {
 				<span>4.5</span>/5
 			 </p>
 			 <p className="text-sm text-white-100">
-				More than +12000 customers
+				More than <b>+12000</b> customers who share the Vedu obsession.
 			 </p>
 			</div>
 		 </div>
