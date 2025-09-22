@@ -93,17 +93,17 @@ const Hero = () => {
 			<div className="space-y-5 hidden md:block">
 			 <p>Cool. Crisp. Classic.</p>
 			 <p className="subtitle">
-				Sip the Spirit <br /> of Summer
+				Sip the Spirit <br /> of Vedu
 			 </p>
 			</div>
 			
 			<div className="view-cocktails">
 			 <p className="subtitle">
-				Every cocktail on our menu is a blend of premium ingredients,
+				Every mojito on our menu is a Vedu obsession: a blend of premium ingredients,
 				creative flair, and timeless recipes — designed to delight your
-				senses.
+				senses with the Vedu touch.
 			 </p>
-			 <a href="#cocktails">View cocktails</a>
+			 <a href="#cocktails">View Mojos</a>
 			</div>
 		 </div>
 		</div>

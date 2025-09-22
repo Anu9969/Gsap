@@ -1,10 +1,23 @@
 import gsap from 'gsap';
 import { useMediaQuery } from 'react-responsive'
 import { useGSAP } from '@gsap/react'
-import { featureLists, goodLists } from '../../constants/index.js'
 
 const Art = () => {
  const isMobile = useMediaQuery({ maxWidth: 767 });
+ 
+ const veduFeatures = [
+   "Vedu-Handpicked ingredients",
+   "Signature Vedu techniques",
+   "Bartending artistry in Vedu action",
+   "Freshly muddled Vedu flavors"
+ ];
+
+ const additionalFeatures = [
+   "Perfectly balanced Vedu blends",
+   "Vedu-Garnished to perfection",
+   "Ice-cold every Vedu time",
+   "Expertly shaken & stirred with Vedu passion"
+ ];
  
  useGSAP(() => {
 	const start = isMobile ? 'top 20%' : 'top top';
@@ -28,11 +41,11 @@ const Art = () => {
  return (
 	<div id="art">
 	 <div className="container mx-auto h-full pt-20">
-		<h2 className="will-fade">The ART</h2>
+		<h2 className="will-fade">The Art</h2>
 		
 		<div className="content">
 		 <ul className="space-y-4 will-fade">
-			{goodLists.map((feature, index) => (
+			{veduFeatures.map((feature, index) => (
 			 <li key={index} className="flex items-center gap-2">
 				<img src="/images/check.png" alt="check" />
 				<p>{feature}</p>
@@ -49,7 +62,7 @@ const Art = () => {
 		 </div>
 		 
 		 <ul className="space-y-4 will-fade">
-			{featureLists.map((feature, index) => (
+			{additionalFeatures.map((feature, index) => (
 			 <li key={index} className="flex items-center justify-start gap-2">
 				<img src="/images/check.png" alt="check" />
 				<p className="md:w-fit w-60">{feature}</p>
@@ -59,10 +72,10 @@ const Art = () => {
 		</div>
 		
 		<div className="masked-container">
-		 <h2 className="will-fade">Sip-Worthy Perfection</h2>
+		 <h2 className="will-fade">Sip-Worthy Vedu Perfection</h2>
 		 <div id="masked-content">
-			<h3>Made with Craft, Poured with Passion</h3>
-			<p>This isn’t just a drink. It’s a carefully crafted moment made just for you.</p>
+			<h3>Made with Vedu Craft, Poured with Vedu Passion</h3>
+			<p>This isn't just a drink. It's a carefully crafted Vedu moment made just for you.</p>
 		 </div>
 		</div>
 	 </div>
