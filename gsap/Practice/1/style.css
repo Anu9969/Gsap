@@ -1,0 +1,20 @@
+*{
+    margin:auto;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+#box{
+    height:100vh;
+    width:100vh;
+    background-color:crimson;
+    border-radius:20px;
+    position: relative;
+}
